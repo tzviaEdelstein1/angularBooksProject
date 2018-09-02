@@ -1,0 +1,6 @@
+<nav>
+  <a *ngIf="!currentUser" routerLink="books/login">Login </a>
+  <a  *ngIf="!currentUser"  routerLink="books/register"> Register</a>
+  <a *ngIf="currentUser" routerLink="books/login"> Logout</a>
+</nav>
+<router-outlet></router-outlet>
