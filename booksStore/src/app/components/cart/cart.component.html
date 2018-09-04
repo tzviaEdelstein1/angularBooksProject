@@ -1,3 +1,4 @@
-<p>
-  cart works!
-</p>
+
+<div *ngFor="let cart of cartProducts">
+  <app-cart-product [book]="cart"></app-cart-product>
+</div>

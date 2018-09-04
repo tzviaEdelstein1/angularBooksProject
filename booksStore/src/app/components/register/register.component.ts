@@ -33,8 +33,8 @@ export class RegisterComponent implements OnInit {
       console.log(this.profileForm.value);
       console.log("user", this.user);
       this.userService.addUser(this.user).subscribe(res=>console.log(res));
-
-   
+localStorage.setItem('currentUser',JSON.stringify(this.user));
+   this.userService.subject.next();
     }
   }
   get lastName() {

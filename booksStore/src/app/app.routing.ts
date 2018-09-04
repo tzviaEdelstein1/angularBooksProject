@@ -13,22 +13,23 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { CartComponent } from './components/cart/cart.component';
 import { CartProductComponent } from './components/cart-product/cart-product.component';
 import { registerModuleFactory } from '../../node_modules/@angular/core/src/linker/ng_module_factory_loader';
+import { AuthGuard } from './shared/auth.guard';
 
 
 const appRoutes: Routes = [
     { path: 'books/home', component: HomeComponent, },
-   
+    { path: '',  component: HomeComponent },
     { path: 'books/products', component: ProductsComponent, },
-    { path: 'books/cart', component: CartComponent, },
+    { path: 'books/cart', component: CartComponent, canActivate: [AuthGuard] },
  { path: 'books/account', component: AccountComponent,children:[
     { path: 'books/login', component: LoginComponent, },
     { path: 'books/register', component: RegisterComponent, },
-
+    { path: 'books', redirectTo: 'books/home',},
  ] },
   
-
+   { path: 'books/details/:book',  component: ProductDetailsComponent },
     // otherwise redirect to home
-    { path: '',  component: HomeComponent }
+    
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

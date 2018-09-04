@@ -1,9 +1,12 @@
 <div class="wrap">
     <div class="search">
-       <input type="text" class="searchTerm" placeholder="What are you looking for?">
+       <input type="text" class="searchTerm" id="searchInput" placeholder="What are you looking for?" (keyup)="searchBooks($event.target.value)">
        <button type="submit" class="searchButton" disabled>
          <i class="fa fa-search"></i>
       </button>
     </div>
  </div>
- <app-product-preview></app-product-preview>
+ <div *ngFor="let book of booksFromServer">
+  
+    <app-product-preview [book]="book"></app-product-preview>
+ </div>

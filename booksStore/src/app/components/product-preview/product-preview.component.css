@@ -137,9 +137,11 @@ body {
     opacity: 1 !important;
   }
   .container {
-    max-width: 800px;
-    min-width: 640px;
+    max-width: 20%;
+    min-width: 20%;
     margin: 0 auto;
+    float: left;
+    position: sticky;
   }
   .container:before,
   .container:after {

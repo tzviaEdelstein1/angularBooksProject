@@ -26,7 +26,19 @@ app.get(`/`, (req, res) => {
     });
 
 });
+app.post("/api/login", (req, res) => {
 
+    let currentlist = require("./user.json");
+    currentlist.forEach(element => {
+        if (element.userName == req.body.userName && element.password == req.body.password) {
+            res.status(201).send(JSON.stringify(element));
+        }
+      
+
+    });
+
+  res.status(201).send(null);
+});
 
 
 
@@ -57,6 +69,6 @@ app.post("/api/user", (req, res) => {
 
 }
 )
-//curl -v -X POST -H "Content-type: application/json" -d "{\"tz\":\"318718962\", \"age\":\"20\",\"name\":\"chani\",\"isMale\":\"false\",\"country\":\"Afghanistan\" }" http://localhost:3500/api/user
+//curl -v -X GET -H "Content-type: application/json" -d "{\"123411\",\"sasd\" }" http://localhost:3500/api/login
 const port = process.env.PORT || 3500;
 app.listen(port, () => { console.log(`OK`); });

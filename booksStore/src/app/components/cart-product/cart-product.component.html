@@ -1,3 +1,23 @@
-<p>
-  cart-product works!
-</p>
+<div class="container">
+  <div class="info">
+   
+  <div class="column">
+
+    <!-- Post-->
+    <div class="post-module">
+      <!-- Thumbnail-->
+      <div class="thumbnail">
+    <img src={{book["volumeInfo"]["imageLinks"]["smallThumbnail"]}}/>
+      </div>
+      <!-- Post Content-->
+      <div class="post-content">
+       <div class="category"><input type="button" value="remove me" (click)=removefromCart()></div>
+        <h1 class="title">{{book["volumeInfo"]["title"]}}</h1>
+        <h2 class="sub_title">{{book["volumeInfo"]["subtitle"]}}</h2>
+       
+      </div>
+    </div>
+  </div>
+  
+  </div>
+</div>

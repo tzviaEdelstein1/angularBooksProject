@@ -17,6 +17,7 @@ import { CartProductComponent } from './components/cart-product/cart-product.com
 import { routing }  from './app.routing';
 import { UserService } from './shared/services/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BooksService } from './shared/services/books.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,routing,FormsModule, ReactiveFormsModule,HttpClientModule
   ],
-  providers: [UserService],
+  providers: [UserService,BooksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

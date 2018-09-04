@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product-preview',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-preview.component.css']
 })
 export class ProductPreviewComponent implements OnInit {
-
+@Input()
+book:any;
   constructor() { }
 
   ngOnInit() {

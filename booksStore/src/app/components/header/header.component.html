@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
   <div class="container">
     <span id="home"><span class="ion-camera"></span></span>
     <div class="box">
@@ -6,15 +6,72 @@
 
         <li><a href="books/account">MyAccount</a></li>
         <li><a href="books/products">Products</a></li>
-        <li><a href="books/cart">MyCart</a></li>
+        <li><a *ngIf="mylocalStorage.getItem('currentUser')" href="books/cart">MyCart</a></li>
       </ul>
     </div>
-
     <span id="menu">
-        <span>Hellow {{ user.name}}</span>
-        <span></span>
-        <span></span>
-        <span><img src="user.img"></span>
+        <span>Hellow {{user.userName}}</span>
+      <span><img src="user.img"></span> 
       </span>
   </div>
+</header> -->
+<!-- <header>
+	<h1>Your Book store</h1>
+	<nav> <a href="books/account">MyAccount</a> <a href="books/products">Products</a> <a *ngIf="mylocalStorage.getItem('currentUser')" href="books/cart">MyCart</a> <span>Hellow {{user.userName}}</span>
+    <span><img src="user.img"></span>  </nav>
 </header>
+<main class="wrapper">
+	
+</main> -->
+
+
+
+<div class="header header-wrap-three">
+  <div class="container cf">
+    <div class="header-top cf">
+      <div class="four col first-col">
+        <div class="icons">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="four col second-col">
+        <h2 class="logo"><a href="#">LOGO</a></h2>
+      </div>
+      <div class="four col third-col">
+        <div class="icons icons-hide">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom cf">
+      <div class="menu-toggle">Menu</div>
+      <div class="mobile-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+          <div class="icons icons-responsive">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+        </ul>
+      </div>
+      <div class="navigation">
+        <ul>
+          <li> <a href="books/account">MyAccount</a></li>
+          <li><a href="books/products">Products</a></li>
+          <li><a *ngIf="mylocalStorage.getItem('currentUser')" href="books/cart">MyCart</a></li>
+          <li><img src={{user.img}} style="width: 20px ;height:20px;"></li> 
+          <li>Hellow{{user.userName}}</li> 
+          <!-- <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
