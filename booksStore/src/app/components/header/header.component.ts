@@ -37,7 +37,7 @@ this.user=JSON.parse((localStorage.getItem('currentUser')));
 }
 else{
 this.user.userName="guest";
-this.user.img='../../shared/img/man (3).png';
+this.user.img='../../../assets/images/(3).png';
 }
 
 }

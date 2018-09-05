@@ -9,13 +9,13 @@ export class UserService {
  subject=new Subject();
   constructor(private httpClient: HttpClient) { }
   addUser(newUser: User) {
-    let url = "http://localhost:3500/api/user"
+    let url = "https://angular-books-project.herokuapp.com/api/user"
     return this.httpClient.post(url, newUser);
 
   }
   getUser(userName:string,password:string){
 let user={"userName":userName,"password":password};
-return this.httpClient.post("http://localhost:3500/api/login",user);
+return this.httpClient.post("https://angular-books-project.herokuapp.com/api/login",user);
 
   }
 

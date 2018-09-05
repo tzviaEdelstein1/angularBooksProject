@@ -36,9 +36,9 @@
       </div>
       <div class="navigation">
         <ul>
-          <li> <a href="booksStore/account">MyAccount</a></li>
-          <li><a href="booksStore/products">Products</a></li>
-          <li><a *ngIf="mylocalStorage.getItem('currentUser')" href="booksStore/cart">MyCart</a></li>
+          <li> <a routerLink="booksStore/account">MyAccount</a></li>
+          <li><a routerLink="booksStore/products">Products</a></li>
+          <li><a *ngIf="mylocalStorage.getItem('currentUser')" routerLink="booksStore/cart">MyCart</a></li>
           <li><img src={{user.img}} style="width: 20px ;height:20px;"></li> 
           <li>Hellow{{user.userName}}</li> 
         

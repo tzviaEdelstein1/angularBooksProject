@@ -28,9 +28,8 @@ const appRoutes: Routes = [
             { path: 'register', component: RegisterComponent, },
         ]
     },
-    // { path: '**', redirectTo: 'booksStore/home' },
+   { path: '**', redirectTo: 'booksStore/home' },
 
-    // otherwise redirect to home
 
 ];
 
