@@ -16,18 +16,20 @@ import { registerModuleFactory } from '../../node_modules/@angular/core/src/link
 import { AuthGuard } from './shared/auth.guard';
 
 
-const appRoutes: Routes = [
-    { path: 'books/home', component: HomeComponent, },
-    { path: '',  component: HomeComponent },
-    { path: 'books/products', component: ProductsComponent, },
-    { path: 'books/cart', component: CartComponent, canActivate: [AuthGuard] },
- { path: 'books/account', component: AccountComponent,children:[
-    { path: 'books/login', component: LoginComponent, },
-    { path: 'books/register', component: RegisterComponent, },
-    { path: 'books', redirectTo: 'books/home',},
+const appRoutes: Routes = [ 
+    { path: 'booksStore/details/:book',  component: ProductDetailsComponent },
+    { path: 'booksStore/home', component: HomeComponent, },
+    // { path: '',  component: HomeComponent },
+    { path: 'booksStore/products', component: ProductsComponent, },
+    { path: 'booksStore/cart', component: CartComponent, canActivate: [AuthGuard] },
+ { path: 'booksStore/account', component: AccountComponent,children:[
+    { path: 'login', component: LoginComponent, },
+    { path: 'register', component: RegisterComponent, },
+ 
  ] },
+   { path: 'booksStore', redirectTo: 'booksStore/home',}, 
+ { path:'**', redirectTo:'booksStore/home' },
   
-   { path: 'books/details/:book',  component: ProductDetailsComponent },
     // otherwise redirect to home
     
 ];

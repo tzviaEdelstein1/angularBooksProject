@@ -1,15 +1,5 @@
-<!-- <h1>title: {{book.volumeInfo.title}}</h1>
-<h2>subtitle:  {{book.volumeInfo.subtitle}}</h2>
-<h3>authors:  {{book.volumeInfo.authors}}</h3>
-<h4>publisher:  {{book.volumeInfo.publisher}}</h4>
-<h4>publishedDate:  {{book.volumeInfo.publishedDate}}</h4>
-<p>description:  {{book.volumeInfo.description}}</p>
-<h4>pageCount:  {{book.volumeInfo.pageCount}}</h4> -->
 
   <img src={{book.volumeInfo.pageCount["imageLinks"]}} style="width: 20%;height: 20%"/> 
-<!-- 
-<input type="button" value="AddToCart" (click)="AddToCart()">
-<input type="button" value="AllProducts" (click)="backToProducts()"> -->
 
 
 <div id="container">	
@@ -19,8 +9,7 @@
             
             <!-- 	Product Name -->
         <h1>{{book.volumeInfo.title}}</h1>
-    <!-- 		<span class="hint new">New</span> -->
-    <!-- 		<span class="hint free-shipping">Free Shipping</span> -->
+
     <!-- 		the Product rating -->
         <span class="hint-star star">
             <i class="fa fa-star" aria-hidden="true"></i>

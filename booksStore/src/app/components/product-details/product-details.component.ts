@@ -31,7 +31,7 @@ export class ProductDetailsComponent implements OnInit {
   }
   backToProducts(){
 localStorage.setItem("flagSearch","true");
-this.router.navigate(['/books/products']);
+this.router.navigate(['/booksStore/products']);
   }
 }
 
