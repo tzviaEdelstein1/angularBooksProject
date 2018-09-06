@@ -16,7 +16,7 @@ npm i
 ng serve --open
 ```
 ## Run this app in dev mode- server side:
-```bash
+```bash 
 clone 'https://github.com/tzviaEdelstein1/angularBooksProject'
 cd booksServer
 npm i
